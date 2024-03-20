@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View ,Image, TouchableOpacity, ScrollView} from 'react-native';
 import normalize from 'react-native-normalize';
 import Textbox from './Component/textbox';
 
@@ -20,6 +20,7 @@ export default function App() {
       <TouchableOpacity style={styles.button}>
           <Text style={{fontSize:normalize(30)}}>Login</Text>
       </TouchableOpacity>
+      
     </View>
   );
 }
@@ -43,8 +44,8 @@ const styles = StyleSheet.create({
     height:normalize(200),
   },
   button:{
-    width:'88%',
-    height:'8%',
+    width:normalize(320),
+    height:normalize(60),
     borderRadius:normalize(10),
     backgroundColor:'yellow',
     justifyContent:'center',

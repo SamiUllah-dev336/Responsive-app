@@ -5,13 +5,13 @@ import Icon from 'react-native-vector-icons/Zocial'
 
 export default function Textbox(props) {
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
         <Icon name={props.iconName} size={normalize(30)} style={styles.icon} />
         <TextInput 
           placeholder={props.placeholder}
           keyboardType={props.Ktype}
         />
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'pink',
     marginTop:normalize(20,'height'),
-    width:'86%',
-    height:'8%',
+    width:normalize(320),
+    height:normalize(60),
     borderRadius:normalize(10) ,
     flexDirection:'row',
     alignItems:'center',
