@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image} from 'react-native';
+import { StyleSheet, Text, View ,Image, TouchableOpacity} from 'react-native';
 import normalize from 'react-native-normalize';
 import Textbox from './Component/textbox';
 
@@ -15,7 +15,11 @@ export default function App() {
       
       <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
       <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
-      <Text style={{fontSize:normalize(40)}}>Here is a text!</Text>
+      <Text style={{fontSize:normalize(40),marginBottom:normalize(20)}}>Here is a text!</Text>
+     
+      <TouchableOpacity style={styles.button}>
+          <Text style={{fontSize:normalize(30)}}>Login</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -28,7 +32,7 @@ const styles = StyleSheet.create({
   },
   outerV:{
     marginTop:normalize(100,'height'),
-    width:normalize(250),
+    width:normalize(250,'width'),
     height:normalize(250,'height'),
     backgroundColor:'yellow',
     justifyContent:'center',
@@ -36,6 +40,14 @@ const styles = StyleSheet.create({
   },
   tinyLogo:{
     width:normalize(200),
-    height:normalize(200,'height'),
+    height:normalize(200),
+  },
+  button:{
+    width:'88%',
+    height:'8%',
+    borderRadius:normalize(10),
+    backgroundColor:'yellow',
+    justifyContent:'center',
+    alignItems:'center'
   }
 });

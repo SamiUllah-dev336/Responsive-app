@@ -18,7 +18,7 @@ export default function Textbox(props) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'pink',
-    marginTop:normalize(20),
+    marginTop:normalize(20,'height'),
     width:'86%',
     height:'8%',
     borderRadius:normalize(10) ,
