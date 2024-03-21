@@ -1,27 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image, TouchableOpacity, ScrollView} from 'react-native';
+import { StyleSheet, Text, View ,Image, TouchableOpacity, ScrollView, KeyboardAvoidingView,Platform} from 'react-native';
 import normalize from 'react-native-normalize';
 import Textbox from './Component/textbox';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.outerV}>
-        <Image
-          style={styles.tinyLogo}
-          source={require('./assets/favicon.png')}
-        />
-      </View>
+    <KeyboardAvoidingView behavior={Platform.OS==='ios'?'padding':'height'} style={{flex:1}}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.outerV}>
+          <Image
+            style={styles.tinyLogo}
+            source={require('./assets/favicon.png')}
+          />
+        </View>
+        
+        <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
+        <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
+        <Text style={{fontSize:normalize(40),marginBottom:normalize(20)}}>Here is a text!</Text>
       
-      <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
-      <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
-      <Text style={{fontSize:normalize(40),marginBottom:normalize(20)}}>Here is a text!</Text>
-     
-      <TouchableOpacity style={styles.button}>
-          <Text style={{fontSize:normalize(30)}}>Login</Text>
-      </TouchableOpacity>
-      
-    </View>
+        <TouchableOpacity style={styles.button}>
+            <Text style={{fontSize:normalize(30)}}>Login</Text>
+        </TouchableOpacity>
+        
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
