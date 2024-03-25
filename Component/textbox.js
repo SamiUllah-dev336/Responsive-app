@@ -18,10 +18,10 @@ export default function Textbox(props) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'pink',
-    marginTop:normalize(20,'height'),
+    marginTop:normalize(20),
     width:normalize(320),
-    height:normalize(60),
-    borderRadius:normalize(10) ,
+    height:normalize(50),
+    borderRadius:normalize(10),
     flexDirection:'row',
     alignItems:'center',
   },

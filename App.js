@@ -3,7 +3,7 @@ import { StyleSheet, Text, View ,Image, TouchableOpacity, ScrollView, KeyboardAv
 import normalize from 'react-native-normalize';
 import Textbox from './Component/textbox';
 import KeyboardAvoidingContainer from './Component/KeyboardAvoidingContainer';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+//import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
