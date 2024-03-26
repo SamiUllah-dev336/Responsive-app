@@ -35,10 +35,10 @@ function Home() {
           <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
           <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
           
-          <Text style={{fontSize:normalize(40),marginBottom:normalize(20),alignSelf:'center'}}>Here is a text!</Text>
+          <Text style={{fontSize:40,marginBottom:20,alignSelf:'center'}}>Here is a text!</Text>
         
           <TouchableOpacity style={styles.button}>
-              <Text style={{fontSize:normalize(30)}}>Login</Text>
+              <Text style={{fontSize:30}}>Login</Text>
           </TouchableOpacity>
 
       </KeyboardAvoidingContainer>
@@ -49,21 +49,21 @@ function Home() {
 
 const styles = StyleSheet.create({
   outerV:{
-    width:normalize(250),
-    height:normalize(250),
+    width:250,
+    height:250,
     backgroundColor:'yellow',
     alignSelf:'center',
     alignItems:'center',
     justifyContent: 'center',
   },
   tinyLogo:{
-    width:normalize(200),
-    height:normalize(200),
+    width:200,
+    height:200,
   },
   button:{
-    width:normalize(320),
-    height:normalize(60),
-    borderRadius:normalize(10),
+    width:320,
+    height:60,
+    borderRadius:10,
     backgroundColor:'yellow',
     justifyContent:'center',
     alignItems:'center'
