@@ -5,7 +5,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 const KeyboardAvoidingContainer = ({ children, backgroundColor }) => {
   return (
-    <SafeAreaView style={{flex:1}}>
+    
       <KeyboardAwareScrollView
       style={{
         flex: 1,
@@ -23,7 +23,7 @@ const KeyboardAvoidingContainer = ({ children, backgroundColor }) => {
     >
       {children}
       </KeyboardAwareScrollView>
-    </SafeAreaView>
+    
   );
 };
 
