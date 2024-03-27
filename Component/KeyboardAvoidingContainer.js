@@ -7,21 +7,21 @@ const KeyboardAvoidingContainer = ({ children, backgroundColor }) => {
   return (
     
       <KeyboardAwareScrollView
-      style={{
-        flex: 1,
-        backgroundColor: backgroundColor || 'orange',
-      }}
-      contentContainerStyle={{
-        flexGrow: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      keyboardShouldPersistTaps="handled"
-      extraScrollHeight={Platform.select({ ios: 40, android:0 })}
-      enableOnAndroid={true}
-      enableAutomaticScroll={true}
-    >
-      {children}
+          style={{
+            flex: 1,
+            backgroundColor: backgroundColor || 'orange',
+          }}
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          keyboardShouldPersistTaps="handled"
+          extraScrollHeight={Platform.select({ ios: 40, android:0 })}
+          enableOnAndroid={true}
+          enableAutomaticScroll={true}
+        >
+        {children}
       </KeyboardAwareScrollView>
     
   );
