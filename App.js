@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View ,Image, TouchableOpacity, ScrollView, KeyboardAvoidingView,Platform} from 'react-native';
+import { StyleSheet, Text, View ,Image, TouchableOpacity, ScrollView, KeyboardAvoidingView,Platform,Dimensions} from 'react-native';
 import Textbox from './Component/textbox';
 import KeyboardAvoidingContainer from './Component/KeyboardAvoidingContainer';
 import { NavigationContainer } from '@react-navigation/native';
@@ -22,6 +22,8 @@ export default function App() {
 
 
 function Home() {
+  const {width,height}=Dimensions.get('window');
+
   return (
       <KeyboardAvoidingContainer>
           <View style={styles.outerV}>
@@ -36,10 +38,10 @@ function Home() {
           <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
           <Textbox iconName='email' placeholder='Enter email' Ktype='email-address' />
           
-          <Text style={{fontSize:RFValue(40),marginBottom:normalize(20),alignSelf:'center'}}>Here is a text!</Text>
+          <Text style={{fontSize:RFValue(40,height),marginBottom:normalize(20),alignSelf:'center'}}>Here is a text!</Text>
         
           <TouchableOpacity style={styles.button}>
-              <Text style={{fontSize:RFValue(30)}}>Login</Text>
+              <Text style={{fontSize:RFValue(30,height)}}>Login</Text>
           </TouchableOpacity>
 
       </KeyboardAvoidingContainer>

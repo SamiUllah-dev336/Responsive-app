@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image, TextInput,KeyboardAvoidingView} from 'react-native';
+import { StyleSheet, Text, View ,Image, TextInput,KeyboardAvoidingView,Dimensions} from 'react-native';
 //import normalize from 'react-native-normalize';
 //import { scale,verticalScale,moderateScale } from 'react-native-size-matters';
 
@@ -9,6 +9,8 @@ import normalize from 'react-native-normalize';
 
 
 export default function Textbox(props) {
+ 
+
   return (
     <View style={styles.container}>
         <Icon name={props.iconName} size={normalize(30)} style={styles.icon} />
