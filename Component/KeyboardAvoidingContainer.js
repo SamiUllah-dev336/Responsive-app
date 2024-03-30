@@ -17,7 +17,7 @@ const KeyboardAvoidingContainer = ({ children, backgroundColor }) => {
             alignItems: 'center',
           }}
           keyboardShouldPersistTaps="handled"
-          extraScrollHeight={Platform.select({ ios: 40, android:0 })}
+          extraScrollHeight={Platform.select({ ios: 40, android:20 })}
           enableOnAndroid={true}
           enableAutomaticScroll={true}
         >
